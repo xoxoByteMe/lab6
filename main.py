@@ -8,7 +8,7 @@ def encode():
     
     ...
 
-def decode(password_string):
+def decode(password_string):   # brenda added decode function
     password = ""
     for i in password_string:
         password_int = int(i)
