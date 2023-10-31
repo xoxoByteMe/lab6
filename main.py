@@ -1,3 +1,10 @@
+"""
+Author: Esther Olatunji
+Date: 10/25/2023
+Description: Githbub lab that exposes students to collobarating on Github
+
+"""
+
 def main():
     option = True
     while True:
@@ -26,15 +33,14 @@ def encode(password):
         encoder += str(password_encode)
     return encoder
 
-def decode(password_string):   # brenda added decode function
-    password = ""
-    for i in password_string:
-        password_int = int(i)
-        password_int -= 3
-        if password_int < 0:
-            password_int += 10
-        password += str(password_int)
-    return password
+def decode(password):
+    decoder = ""
+    for i in password:
+        password_decode = int(i)
+        password_decode -= 3
+        password_decode %= 10
+        decoder += str(password_decode)
+    return decoder
 
 if __name__ == "__main__":
     main()
